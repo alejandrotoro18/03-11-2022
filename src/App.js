@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import{useState} from "react";
+import Characters from "../src/components/caracter";
 export default function App() {
 
   const[characters, setCharacters]= useState(null);
@@ -17,7 +18,7 @@ export default function App() {
     <div>
       <h1>Api</h1>
       <p > Ricky & Morty</p>
-      < character/>
+      < Characters/>
       <img src= "https://raw.githubusercontent.com/ratasi/rick-morty/master/src/img/rick-morty.png"width="900"
      height="500" ></img>
      
