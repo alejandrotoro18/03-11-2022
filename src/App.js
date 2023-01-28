@@ -15,14 +15,27 @@ export default function App() {
   };
   return (
    
-    <div>
-      <h1>Api</h1>
-      <p > Ricky & Morty</p>
-      < Characters/>
+    <div className= "App">
+      <header className="App-header">
+      <h1 className="title">Ricky & Morty</h1>
+      
+      {characters ? (
+        <Characters characters={characters}/>
+      ) :(
+      <>
       <img src= "https://raw.githubusercontent.com/ratasi/rick-morty/master/src/img/rick-morty.png"width="900"
-     height="500" ></img>
+     height="500" >
+
+     </img>
      
      <button onClick={reqApi} className="btn-search" >Buscar Personajes..</button>
-    </div>
+   
+      </>
+      )}
+      < Characters/>
+      </header>
+      </div>
+  
   );
 }
+export default App;
